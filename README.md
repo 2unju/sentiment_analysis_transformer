@@ -26,5 +26,11 @@ Train : Validation : Test = 0.7 : 0.2 : 0.1
 
 ## Main Idea
 1. Transformer  
-   [Attention is All You Need](https://arxiv.org/pdf/1706.03762.pdf)  
+   > [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)  
    
+   <img src = "https://github.com/radoslawkrolikowski/sentiment-analysis-pytorch/raw/013c55eaea3b4333a6b05a46ee1123811285a8f4/assets/Transformer-classifier.png">  
+     
+   > model/image from [Fork](https://github.com/radoslawkrolikowski/sentiment-analysis-pytorch/)  
+
+
+  "Attention Is All You Need"에서 제안된 모델에 Max/Avg Pooling 적용(default = max) 후 소프트맥스 함수를 거쳐 예측값을 출력.
