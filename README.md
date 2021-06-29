@@ -7,8 +7,7 @@ https://github.com/radoslawkrolikowski/sentiment-analysis-pytorch
 - [x] *.ipynb files -> *.py files  
 - [x] numpy를 제외한 모든 작업을 gpu로 이관  
 - [ ] tqdm_notebook -> tqdm  
-- [x] checkpoint 추가(현 저장 방법 : list형 변수)
-
+- [x] checkpoint 추가
 ## Experiments
 ### Dataset
 IMDb 영화 리뷰 데이터셋 50,000개 이용  
