@@ -612,15 +612,7 @@ for epoch in range(epochs):
         model.to(device)
         train_losses, train_avg_loss, train_accuracy = model.train_model(train_iterator)
 
-        train_losses_list.append(train_losses)
-        train_avg_loss_list.append(train_avg_loss)
-        train_accuracy_list.append(train_accuracy)
-
         _, eval_avg_loss, eval_accuracy, conf_matrix = model.evaluate_model(val_iterator)
-
-        eval_avg_loss_list.append(eval_avg_loss)
-        eval_accuracy_list.append(eval_accuracy)
-        conf_matrix_list.append(conf_matrix)
 
         print(
             '\nEpoch [{}/{}]: Train accuracy: {:.3f}. Train loss: {:.4f}. Evaluation accuracy: {:.3f}. Evaluation loss: {:.4f}'.format(
@@ -628,6 +620,23 @@ for epoch in range(epochs):
 
         train_writer.add_scalar('Training loss', train_avg_loss, epoch)
         val_writer.add_scalar('Validation loss', eval_avg_loss, epoch)
+
+        if eval_accuracy > max(eval_accuracy_list) or not eval_accuracy_list:
+            print('Saving...')
+            torch.save({
+                'epoch' : epoch,
+                'model_state_dict' : model.state_dict(),
+                'optimizer_state_dict' : optimizer.state_dict(),
+                'loss' : eval_avg_loss,
+            }, '/checkpoint/tf.pt')
+
+        train_losses_list.append(train_losses)
+        train_avg_loss_list.append(train_avg_loss)
+        train_accuracy_list.append(train_accuracy)
+
+        eval_avg_loss_list.append(eval_avg_loss)
+        eval_accuracy_list.append(eval_accuracy)
+        conf_matrix_list.append(conf_matrix)
 
         if early_stop.stop(eval_avg_loss, model, delta=0.003):
             break
