@@ -49,7 +49,11 @@ dataset
         └── negative
 ```  
 
-3. Run Transformer.py
+3. Run 
+```
+python data_processing.py
+python transformer.py
+```
 
 
 ### Result
