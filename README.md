@@ -18,14 +18,14 @@ Train : Validation : Test = 0.7 : 0.2 : 0.1
 1. Install Requirements  
 python version : 3.7 권장  
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
   
 2. Download Dataset
 ```
 # In Ubuntu
 wget http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz
-tar -xzf aclImdb.tar.gz
+tar -xzf aclImdb_v1.tar.gz
 ```
   
 압축 해제시 다음과 같은 구조의 폴더 생성  
