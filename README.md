@@ -41,6 +41,7 @@ aclImdb
 
 3. Run 
 ```
+python -m spacy download en_core_web_sm
 python data_processing.py
 python transformer.py
 ```
