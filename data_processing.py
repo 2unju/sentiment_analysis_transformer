@@ -340,7 +340,7 @@ batch_size = 512
 n_threads = 2
 part_size = 5000
 # path = os.path.join(os.getcwd(), 'dataset/datasets_feat/')
-path = os.path.join(os.getcwd(), 'aclImdb/')
+path = os.path.join(os.getcwd(), 'aclImdb_v1/')
 name = 'dataset_feat.csv'
 
 # Perform feature extraction and export resulted file into CSV
@@ -353,14 +353,14 @@ col_types = {'review': str, 'label': np.int16, 'polarity': np.float16, 'subjecti
 
 # Import dataset from the CSV file
 # dataset_feat = pd.read_csv('dataset/datasets_feat/dataset_feat.csv', dtype=col_types)
-dataset_feat = pd.read_csv('aclImdb/dataset_feat.csv', dtype=col_types)
+dataset_feat = pd.read_csv('aclImdb_v1/dataset_feat.csv', dtype=col_types)
 
 # Print the first 5 rows from the dataset
 dataset_feat.head()
 dataset_feat.info()
 # Import the dataset
 # dataset_feat = pd.read_csv('dataset/datasets_feat/dataset_feat.csv')
-dataset_feat = pd.read_csv('aclImdb/dataset_feat.csv')
+dataset_feat = pd.read_csv('aclImdb_v1/dataset_feat.csv')
 
 def token_filter(token):
     """Filter the token for text_preprocessing function.
@@ -479,7 +479,7 @@ batch_size = 512
 n_threads = 2
 part_size = 5000
 # path = os.path.join(os.getcwd(), 'dataset/datasets_feat_clean/')
-path = os.path.join(os.getcwd(), 'aclImdb/')
+path = os.path.join(os.getcwd(), 'aclImdb_v1/')
 name = 'dataset_feat_clean.csv'
 
 # Perform text preprocessing and save the resulted frame to CSV file
@@ -487,7 +487,7 @@ split_norm_save(dataset_feat, name, path, part_size, batch_size, n_threads, nlp)
 
 # Import preprocessed dataset from CSV file
 # dataset_feat_clean = pd.read_csv('dataset/datasets_feat_clean/dataset_feat_clean.csv')
-dataset_feat_clean = pd.read_csv('aclImdb/dataset_feat_clean.csv')
+dataset_feat_clean = pd.read_csv('aclImdb_v1/dataset_feat_clean.csv')
 dataset_feat_clean.head()
 
 
@@ -538,6 +538,6 @@ print('Test set shape: {}'.format(test_set.shape))
 # train_set.to_csv('dataset/datasets_feat_clean/train_feat_clean.csv', index=False)
 # val_set.to_csv('dataset/datasets_feat_clean/val_feat_clean.csv', index=False)
 # test_set.to_csv('dataset/datasets_feat_clean/test_feat_clean.csv', index=False)
-train_set.to_csv('aclImdb/train_feat_clean.csv', index=False)
-val_set.to_csv('aclImdb/val_feat_clean.csv', index=False)
-test_set.to_csv('aclImdb/test_feat_clean.csv', index=False)
+train_set.to_csv('aclImdb_v1/train_feat_clean.csv', index=False)
+val_set.to_csv('aclImdb_v1/val_feat_clean.csv', index=False)
+test_set.to_csv('aclImdb_v1/test_feat_clean.csv', index=False)

@@ -517,13 +517,13 @@ if CUDA:
 model.add_device(device)
 
 # train_dataset = pd.read_csv('dataset/datasets_feat_clean/train_feat_clean.csv',
-train_dataset = pd.read_csv('aclImdb/train_feat_clean.csv',
+train_dataset = pd.read_csv('aclImdb_v1/train_feat_clean.csv',
                             usecols=['clean_review', 'label'])
 train_dataset = train_dataset[['clean_review', 'label']]
 train_dataset.head()
 
 # val_dataset = pd.read_csv('dataset/datasets_feat_clean/val_feat_clean.csv',
-val_dataset = pd.read_csv('aclImdb/val_feat_clean.csv',
+val_dataset = pd.read_csv('aclImdb_v1/val_feat_clean.csv',
                           usecols=['clean_review', 'label'])
 val_dataset = val_dataset[['clean_review', 'label']]
 val_dataset.head()
@@ -648,7 +648,7 @@ for epoch in range(epochs):
         val_writer.close()
 
 # test_dataset = pd.read_csv('dataset/datasets_feat_clean/test_feat_clean.csv',
-test_dataset = pd.read_csv('aclImdb/test_feat_clean.csv',
+test_dataset = pd.read_csv('aclImdb_v1/test_feat_clean.csv',
                            usecols=['clean_review', 'label'])
 test_dataset = test_dataset[['clean_review', 'label']]
 test_dataset.head()

@@ -37,20 +37,7 @@ aclImdb
   ├── train
         ├── pos
         └── neg
-```  
-아래와 같이 변경
 ```
-dataset
-  ├── test
-  │     ├── positive
-  │     ├── negative
-  ├── train
-  │     ├── positive
-  │     └── negative
-  ├── dataset_raw
-  ├── dataset_feat
-  ├── dataset_feat_clean
-```  
 
 3. Run 
 ```
