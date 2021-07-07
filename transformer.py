@@ -4,10 +4,8 @@ import pandas as pd
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-# from torch import device
 import tqdm
 import numpy as np
-# import CuPy as cp
 from sklearn.metrics import confusion_matrix
 from tensorboardX import SummaryWriter
 
@@ -653,7 +651,7 @@ test_dataset = pd.read_csv('aclImdb/test_feat_clean.csv',
 test_dataset = test_dataset[['clean_review', 'label']]
 test_dataset.head()
 
-test_iterator = BatchIterator(test_dataset, batch_size=256, vocab_created=False, vocab=None, target_col=None,
+test_iterator = BatchIterator(test_dataset, batch_size=batch_size, vocab_created=False, vocab=None, target_col=None,
                               word2index=train_iterator.word2index, sos_token='<SOS>', eos_token='<EOS>',
                               unk_token='<UNK>', pad_token='<PAD>', min_word_count=3, max_vocab_size=None,
                               max_seq_len=0.9, use_pretrained_vectors=False, glove_path='glove/',
