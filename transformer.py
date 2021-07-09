@@ -621,14 +621,14 @@ for epoch in range(epochs):
         train_writer.add_scalar('Training loss', train_avg_loss, epoch)
         val_writer.add_scalar('Validation loss', eval_avg_loss, epoch)
 
-        if eval_accuracy > max(eval_accuracy_list) or not eval_accuracy_list:
+        if not eval_accuracy_list or eval_accuracy > max(eval_accuracy_list):
             print('Saving...')
             torch.save({
                 'epoch' : epoch,
                 'model_state_dict' : model.state_dict(),
                 'optimizer_state_dict' : optimizer.state_dict(),
                 'loss' : eval_avg_loss,
-            }, '/checkpoint/tf.pt')
+            }, 'tf.pt')
 
         train_losses_list.append(train_losses)
         train_avg_loss_list.append(train_avg_loss)
