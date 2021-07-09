@@ -47,3 +47,10 @@ python transformer.py
 
 
 ### Result
+
+<img src="https://user-images.githubusercontent.com/77797199/125012902-e4ee9a00-e0a5-11eb-9c85-194c1855cbb8.PNG">
+<img src="https://user-images.githubusercontent.com/77797199/125012846-d2746080-e0a5-11eb-843d-bb2fa259dfa7.PNG">
+  
+|Train acc|Validation acc|Test acc|
+|:---:|:---:|:---:|
+|0.906|0.887|0.872|
