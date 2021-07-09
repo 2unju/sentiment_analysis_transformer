@@ -7,7 +7,7 @@ https://github.com/radoslawkrolikowski/sentiment-analysis-pytorch
 - [x] *.ipynb files -> *.py files  
 - [x] 불필요한 데이터 삭제  
 - [x] numpy를 제외한 모든 작업을 gpu로 이관  
-- [x] tqdm_notebook -> tqdm  
+- [ ] tqdm_notebook -> tqdm  
 - [x] checkpoint 추가
 ## Experiments
 ### Dataset
