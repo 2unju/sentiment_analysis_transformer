@@ -13,7 +13,7 @@ https://github.com/radoslawkrolikowski/sentiment-analysis-pytorch
 ### Dataset
 IMDb 영화 리뷰 데이터셋 50,000개 이용  
 Train : Validation : Test = 0.7 : 0.2 : 0.1  
-<img src="https://user-images.githubusercontent.com/77797199/123633685-75caa780-d854-11eb-877c-8181c05cf25d.PNG">  
+<img src="https://user-images.githubusercontent.com/77797199/125013576-056b2400-e0a7-11eb-8561-8127a763f90e.png">  
 
 ### How to Use  
 1. Install Requirements  
